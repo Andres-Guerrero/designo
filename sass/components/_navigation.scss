@@ -1,0 +1,43 @@
+#navigation__toggle {
+    display: block;
+}
+
+.navigation {
+    width: 100%;
+    padding: 48px 24px 16px;
+    position: absolute;
+    top: 103px;
+    left: 0px;
+    // display: flex;
+    display: none;
+    flex-direction: column;
+    font-size: 1.5em;
+    font-weight: $regular;
+    letter-spacing: $spacing-2;
+    background-color: $black;
+
+    a {
+        margin-bottom: 32px;
+        color: $white;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .navigation {
+        width: auto;
+        padding: 0;
+        display: block;
+        position: static;
+        font-size: 0.875em;
+        background-color: $white;
+        a {
+            margin-bottom: 0;
+            padding-left: 40px;
+            color: $black;
+        }
+    }
+
+    #navigation__toggle {
+        display: none;
+    }
+}

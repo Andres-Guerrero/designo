@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-10.000000, -94.000000)" fill="#E7816B" fill-rule="nonzero">
+            <g id="Group-33" transform="translate(10.000000, 50.000000)">
+                <path d="M12,44 C5.373,44 0,49.373 0,56 C0,62.627 5.373,68 12,68 C18.627,68 24,62.627 24,56 C24,49.373 18.627,44 12,44 Z M16.441,60.892 C14.339,61.036 9.657,61.036 7.558,60.892 C5.282,60.736 5.017,59.622 5,56 C5.017,52.371 5.285,51.264 7.558,51.108 C9.657,50.964 14.34,50.964 16.441,51.108 C18.718,51.264 18.982,52.378 19,56 C18.982,59.629 18.715,60.736 16.441,60.892 Z M10,53.658 L14.917,55.996 L10,58.342 L10,53.658 L10,53.658 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

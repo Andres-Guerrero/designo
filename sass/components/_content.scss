@@ -1,0 +1,9 @@
+.content__wrap {
+    @include content-wrap;
+}
+
+.content__wrap__full {
+    @include content-wrap-full-width;
+}
+
+

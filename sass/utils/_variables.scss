@@ -1,0 +1,92 @@
+/****************************
+    COLORS 
+****************************/
+
+// Primary Colors
+$peach: #E7816B;
+$black: #1D1C1E;
+$white: #FFFFFF;
+
+// Secondary Colors
+$light-peach: #FFAD9B;
+$dark-grey: #333136;
+$light-grey: #DFDFDF;
+
+// Footer color font
+$footer-gray: #8D8D8E;
+
+/****************************
+    FONT PROPERTIES
+****************************/
+
+$font-base-size: 1em; // 16px
+$regular: 400;
+$medium: 500;
+$spacing-2: 2px;
+$spacing-5: 5px;
+
+/****************************
+    CONTAINER RESPONSIVE
+****************************/
+@mixin content-wrap {
+    max-width: 100%;
+    padding: 0 24px;
+    @media only screen and (min-width: $tablet) {
+        padding: 0 40px;
+    }
+    @media only screen and (min-width: $desktop) {
+        .content {
+            margin: 0 auto;
+            width: 1111px;
+        }
+    }
+}
+
+@mixin content-wrap-full-width {
+    @media only screen and (min-width: $mobile) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    @include content-wrap;
+}
+
+/****************************
+    CONAINERS-BORDERS
+****************************/
+$radius-container: 15px;
+
+@mixin bg-peach-radius {
+    background-color: $peach;
+    border-radius: $radius-container;
+}
+
+/****************************
+    BUTTONS
+****************************/
+@mixin btn {
+    padding: 1.0625em 1.125em;
+    border-radius: 8px;
+    font-size: 0.9375em;
+    text-transform: uppercase;
+    letter-spacing: 1px
+}
+
+@mixin btn-on-dark {
+    @include btn;
+    color: $dark-grey;
+    background-color: $white;
+    
+    &:hover {
+        text-decoration: none;
+        color: #FFF;
+        background-color: $light-peach;
+    }
+}
+
+/****************************
+    BREAKPOINTS
+****************************/
+$mobile: 375px;
+$tablet: 768px;
+$desktop: 1440px;
+
