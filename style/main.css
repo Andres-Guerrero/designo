@@ -68,6 +68,7 @@ input {
 
 a {
   text-decoration: none;
+  color: #FFFFFF;
 }
 a:hover {
   text-decoration: underline;
@@ -106,23 +107,22 @@ h3 {
 }
 
 .header__content {
-  max-width: 100%;
+  padding-top: 35px;
+  padding-bottom: 35px;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 35px 24px;
 }
 @media only screen and (min-width: 768px) {
   .header__content {
-    padding: 64px 2.5em;
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 }
 @media only screen and (min-width: 1440px) {
   .header__content {
-    margin: 0 auto;
     padding: 64px 2.5rem;
-    width: 1111px;
   }
 }
 .header__content__logo img {
@@ -172,11 +172,13 @@ h3 {
 }
 .content__wrap {
   max-width: 100%;
-  padding: 0 24px;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
 }
 @media only screen and (min-width: 768px) {
   .content__wrap {
-    padding: 0 40px;
+    padding-right: 2.5em;
+    padding-left: 2.5em;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -185,10 +187,10 @@ h3 {
     width: 1111px;
   }
 }
-
 .content__wrap__full {
   max-width: 100%;
-  padding: 0 24px;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
 }
 @media only screen and (min-width: 375px) {
   .content__wrap__full {
@@ -198,7 +200,8 @@ h3 {
 }
 @media only screen and (min-width: 768px) {
   .content__wrap__full {
-    padding: 0 40px;
+    padding-right: 2.5em;
+    padding-left: 2.5em;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -209,12 +212,14 @@ h3 {
 }
 
 .footer {
-  padding: 64px 24px;
+  padding-top: 64px;
+  padding-bottom: 64px;
   background-color: #1D1C1E;
 }
 @media screen and (min-width: 768px) {
   .footer {
-    padding: 80px 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -233,9 +238,7 @@ h3 {
 }
 @media only screen and (min-width: 1440px) {
   .footer__content {
-    margin: 0 auto;
     padding: 0 0 40px;
-    width: 1111px;
   }
 }
 .footer__brand {
@@ -337,8 +340,6 @@ h3 {
 }
 
 .cta__bottom {
-  max-width: 100%;
-  padding: 0 24px;
   position: relative;
 }
 .cta__bottom .cta__bottom__content {
@@ -349,21 +350,24 @@ h3 {
   border-radius: 15px;
   text-align: center;
   color: #FFFFFF;
+  background-image: url("../images/bg-bottom-banner.svg");
+  background-repeat: no-repeat;
+  background-position: 35% 50%;
 }
 @media only screen and (min-width: 768px) {
   .cta__bottom .cta__bottom__content {
     padding: 64px 132px;
+    background-position: 35% 50%;
   }
 }
 @media only screen and (min-width: 1440px) {
   .cta__bottom .cta__bottom__content {
-    margin: 0 auto;
     padding: 64px 5.9375em;
-    width: 1111px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: left;
+    background-position: 100% 50%;
   }
 }
 .cta__bottom .cta__bottom__content .cta__copy_one {
@@ -383,6 +387,111 @@ h3 {
   left: 0px;
   background-color: #1D1C1E;
   z-index: 0;
+}
+
+.service__banners {
+  display: grid;
+  grid-gap: 30px;
+}
+@media screen and (min-width: 1440px) {
+  .service__banners {
+    grid-template-columns: auto auto;
+  }
+}
+
+.service__banner {
+  position: relative;
+  border-radius: 15px;
+}
+.service__banner a {
+  padding: 90px 0;
+  width: 100%;
+  border-radius: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .service__banner a {
+    padding: 54px 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .service__banner a {
+    height: 100%;
+    padding: 108px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.service__banner a span {
+  display: block;
+}
+.service__banner a:hover {
+  text-decoration: none;
+}
+.service__banner .service__title {
+  padding-bottom: 12px;
+  font-size: 1.75em;
+  letter-spacing: 2px;
+}
+.service__banner .service__view {
+  font-size: 0.9375em;
+  letter-spacing: 5px;
+}
+.service__banner .overlay {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: #000;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.service__banner:hover > div.overlay {
+  background-color: #FFAD9B;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) {
+  .web__design__banner {
+    height: 100%;
+    grid-row: 1/span 2;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .web__design__banner a {
+    padding: 0;
+  }
+}
+
+.web__design__banner {
+  background-image: url(../images/web-design-bg@2x.png);
+  background-color: #FFAD9B;
+  background-repeat: no-repeat;
+  background-position: 80% 90%;
+  background-size: 250%;
+}
+
+.app__design__banner {
+  background-image: url(../images/app-design-bg@2x.png);
+  background-color: #FFAD9B;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  background-size: 150%;
+}
+
+.graphic__design__banner {
+  background-image: url(../images/graphic-design-bg@2x.png);
+  background-color: #FFAD9B;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  background-size: 170%;
 }
 
 /*# sourceMappingURL=main.css.map */

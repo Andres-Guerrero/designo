@@ -1,9 +1,11 @@
 .footer {
-    padding: 64px 24px;
+    padding-top: 64px;
+    padding-bottom: 64px;
     background-color: $black;
     
     @media screen and (min-width: $tablet) {
-        padding: 80px 40px;
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 
     @media only screen and (min-width: $desktop) {
@@ -11,7 +13,6 @@
     }
 
     &__content {
-        // padding: 0 63px;
         color: $footer-gray;
         text-align: center;
 
@@ -20,9 +21,7 @@
         }
 
         @media only screen and (min-width: $desktop) {
-            margin: 0 auto;
             padding: 0 0 40px;
-            width: 1111px;
         }
     }
 

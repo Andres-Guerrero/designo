@@ -30,9 +30,11 @@ $spacing-5: 5px;
 ****************************/
 @mixin content-wrap {
     max-width: 100%;
-    padding: 0 24px;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
     @media only screen and (min-width: $tablet) {
-        padding: 0 40px;
+        padding-right: 2.5em;
+        padding-left: 2.5em;
     }
     @media only screen and (min-width: $desktop) {
         .content {

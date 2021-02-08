@@ -1,6 +1,4 @@
 .cta__bottom {
-    max-width: 100%;
-    padding: 0 24px;
     position: relative;
 
     .cta__bottom__content {
@@ -10,19 +8,22 @@
         @include bg-peach-radius;
         text-align: center;
         color: $white;
+        background-image: url('../images/bg-bottom-banner.svg');
+        background-repeat: no-repeat;
+        background-position: 35% 50%;
 
         @media only screen and (min-width: $tablet) {
             padding: 64px 132px;
+            background-position: 35% 50%;
         }
 
         @media only screen and (min-width: $desktop) {
-            margin: 0 auto;
             padding: 64px 5.9375em;
-            width: 1111px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             text-align: left;
+            background-position: 100% 50%;
         }
 
         .cta__copy_one {

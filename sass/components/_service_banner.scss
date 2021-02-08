@@ -1,0 +1,110 @@
+.service__banners {
+    display: grid;
+    grid-gap: 30px;
+
+    @media screen and (min-width: $desktop) {
+        grid-template-columns: auto auto;
+    }
+}
+
+.service__banner {
+    position: relative;
+    border-radius: $radius-container;
+
+    a {
+        padding: 90px 0;
+        width: 100%;  
+        border-radius: $radius-container;
+        text-align: center;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 2;
+        display: block;
+        
+        @media screen and (min-width: $tablet) {
+            padding: 54px 0;
+        }
+
+        @media screen and (min-width: $desktop) {
+            height: 100%;
+            padding: 108px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        span {
+            display: block;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .service__title {
+        padding-bottom: 12px;
+        font-size: 1.75em;
+        letter-spacing: $spacing-2;
+    }
+
+    .service__view {
+        font-size: 0.9375em;
+        letter-spacing: $spacing-5;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        border-radius: $radius-container;
+        background-color: #000;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    &:hover > div.overlay {
+        background-color: $light-peach;
+        opacity: .8;
+    }
+
+}
+
+.web__design__banner {
+    @media screen and (min-width: $tablet) {
+        height: 100%;
+        grid-row: 1 / span 2;
+    }
+
+    a {
+        @media screen and (min-width: $desktop) {
+            padding: 0;
+        }
+    }
+}
+
+.web__design__banner {
+    background-image: url(../images/web-design-bg@2x.png);
+    background-color: $light-peach;
+    background-repeat: no-repeat;
+    background-position: 80% 90%;
+    background-size: 250%;
+}
+
+.app__design__banner {
+    background-image: url(../images/app-design-bg@2x.png);
+    background-color: $light-peach;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: 150%;
+}
+
+.graphic__design__banner {
+    background-image: url(../images/graphic-design-bg@2x.png);
+    background-color: $light-peach;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: 170%;
+}
