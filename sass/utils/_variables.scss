@@ -28,13 +28,13 @@ $spacing-5: 5px;
 /****************************
     CONTAINER RESPONSIVE
 ****************************/
-@mixin content-wrap {
-    max-width: 100%;
-    padding-right: 1.5em;
-    padding-left: 1.5em;
+@mixin responsive-tablet-desktop {
     @media only screen and (min-width: $tablet) {
         padding-right: 2.5em;
         padding-left: 2.5em;
+        .content {
+            border-radius: $radius-container;
+        }
     }
     @media only screen and (min-width: $desktop) {
         .content {
@@ -44,16 +44,21 @@ $spacing-5: 5px;
     }
 }
 
-@mixin content-wrap-full-width {
-    @media only screen and (min-width: $mobile) {
-        padding-right: 0;
-        padding-left: 0;
-    }
-    @include content-wrap;
+@mixin content-wrap {
+    max-width: 100%;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    @include responsive-tablet-desktop;
 }
 
+@mixin content-wrap-full-width {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    @include responsive-tablet-desktop;
+}
 /****************************
-    CONAINERS-BORDERS
+    CONTAINERS-BORDERS
 ****************************/
 $radius-container: 15px;
 
