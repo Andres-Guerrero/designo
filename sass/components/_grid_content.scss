@@ -1,0 +1,184 @@
+.grid__content {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $desktop) {
+        // width: 350px;
+        // flex-direction: row;
+        // flex-wrap: wrap;
+        // justify-content: space-between;
+        display: grid;
+        row-gap: 30px;
+        -moz-column-gap: 30px;
+             column-gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    a.grid__cell {
+        margin-bottom: 40px;
+        width: 100%;
+        text-align: center;
+        border-radius: $radius-container;
+        background-color: #FDF3F0;
+        color: $dark-grey;
+       
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+        }
+        
+        @media screen and (min-width: $desktop) {
+            width: 350px;
+            margin-bottom: 0;
+            flex-direction: column;
+        }
+
+        .cell__bg {
+            height: 320px;
+
+            @media screen and (min-width: $tablet) {
+                width: 50%;
+                height: 310px;
+                border-bottom-left-radius: $radius-container;
+            }
+
+            @media screen and (min-width: $desktop) {
+                width: 100%;
+                height: 320px;
+                border-bottom-left-radius: 0;
+            }
+        }
+
+        .cell__info {
+            padding: 32px 30px;
+
+            @media screen and (min-width: $tablet) {
+                width: 50%;
+                align-self: stretch;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            @media screen and (min-width: $desktop) {
+                width: 100%;
+                // height: 158px;
+                // height: 100%;
+                padding: 32px;
+            }
+
+            h4 {
+                margin-bottom: 16px;
+                font-weight: $medium;
+                color: $peach;
+                text-transform: uppercase;
+                letter-spacing: $spacing-5;
+            }
+        }
+    }
+
+    a.grid__cell:hover {
+        text-decoration: none;
+        
+        & > .cell__info, {
+            background-color: $peach;
+            color: $white;
+            border-bottom-right-radius: $radius-container;
+            border-bottom-left-radius: $radius-container;
+            
+            @media screen and (min-width: $tablet) {
+                border-top-right-radius: $radius-container;
+                border-bottom-right-radius: $radius-container;
+                border-bottom-left-radius: 0;
+            }
+            
+            @media screen and (min-width: $desktop) {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: $radius-container;
+                border-bottom-left-radius: $radius-container;
+            }
+        }
+    
+        & > .cell__info h4 {
+            color: $white;
+        }
+    }
+}
+
+// @media (min-width: $mobile) {
+//     a.grid__cell:last-child {
+//         margin-bottom: 0
+//     }
+// }
+
+// @media (min-width: $desktop) {
+//     a.grid__cell:nth-last-child(-n+3) {
+//         margin-bottom: 0;
+//     }
+// }
+
+// Web Design Projects
+.web_proj_1 {
+    @include bg-projects;
+    background-image: url(../images/projects/web-1.jpg);
+}
+
+.web_proj_2 {
+    @include bg-projects;
+    background-image: url(../images/projects/web-2.jpg);
+}
+.web_proj_3 {
+    @include bg-projects;
+    background-image: url(../images/projects/web-3.jpg);
+}
+.web_proj_4 {
+    @include bg-projects;
+    background-image: url(../images/projects/web-4.jpg);
+}
+.web_proj_5 {
+    @include bg-projects;
+    background-image: url(../images/projects/web-5.jpg);
+}
+.web_proj_6 {
+    @include bg-projects;
+    background-image: url(../images/projects/web-6.jpg);
+}
+
+// App Design Projects
+.app_proj_1 {
+    @include bg-projects;
+    background-image: url(../images/projects/app-1.jpg);
+}
+
+.app_proj_2 {
+    @include bg-projects;
+    background-image: url(../images/projects/app-2.jpg);
+}
+.app_proj_3 {
+    @include bg-projects;
+    background-image: url(../images/projects/app-3.jpg);
+}
+.app_proj_4 {
+    @include bg-projects;
+    background-image: url(../images/projects/app-4.jpg);
+}
+.app_proj_5 {
+    @include bg-projects;
+    background-image: url(../images/projects/app-5.jpg);
+}
+
+// Graphic Design Projects
+.graph_proj_1 {
+    @include bg-projects;
+    background-image: url(../images/projects/graphic-1.jpg);
+}
+
+.graph_proj_2 {
+    @include bg-projects;
+    background-image: url(../images/projects/graphic-2.jpg);
+}
+.graph_proj_3 {
+    @include bg-projects;
+    background-image: url(../images/projects/graphic-3.jpg);
+}

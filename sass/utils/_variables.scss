@@ -26,6 +26,13 @@ $spacing-2: 2px;
 $spacing-5: 5px;
 
 /****************************
+    BREAKPOINTS
+****************************/
+$mobile: 375px;
+$tablet: 768px;
+$desktop: 1440px;
+
+/****************************
     CONTAINER RESPONSIVE
 ****************************/
 @mixin responsive-tablet-desktop {
@@ -91,9 +98,22 @@ $radius-container: 15px;
 }
 
 /****************************
-    BREAKPOINTS
+    BG PROJECTS GRID
 ****************************/
-$mobile: 375px;
-$tablet: 768px;
-$desktop: 1440px;
+@mixin bg-projects {
+    border-top-left-radius: $radius-container;
+    border-top-right-radius: $radius-container;
+    background-repeat: no-repeat;
+    background-size: cover;
 
+    @media screen and (min-width: $tablet) {
+        border-top-right-radius: 0;
+        border-top-left-radius: $radius-container;
+        border-bottom-left-radius: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        border-top-right-radius: $radius-container;
+        border-bottom-left-radius: 0;
+    }
+}

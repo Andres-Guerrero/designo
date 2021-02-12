@@ -3,7 +3,8 @@
     grid-gap: 30px;
 
     @media screen and (min-width: $desktop) {
-        grid-template-columns: auto auto;
+        // grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
