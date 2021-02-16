@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="584px" height="584px" viewBox="0 0 584 584" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>about-us_subcard-bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#5D0202" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#5D0202" stop-opacity="0.497568837" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.06">
+        <g id="bg" transform="translate(-100.000000, -864.000000)" fill="url(#linearGradient-1)">
+            <g id="about-us_subcard-bg" transform="translate(100.000000, 864.000000)">
+                <circle id="Oval-Copy-4" transform="translate(146.000000, 438.000000) scale(-1, 1) rotate(180.000000) translate(-146.000000, -438.000000) " cx="146" cy="438" r="146"></circle>
+                <circle id="Oval-Copy-7" transform="translate(146.000000, 146.000000) scale(-1, 1) translate(-146.000000, -146.000000) " cx="146" cy="146" r="146"></circle>
+                <circle id="Oval-Copy-5" transform="translate(438.000000, 438.000000) scale(-1, 1) rotate(90.000000) translate(-438.000000, -438.000000) " cx="438" cy="438" r="146"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

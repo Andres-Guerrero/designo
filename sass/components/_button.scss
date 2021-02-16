@@ -1,4 +1,12 @@
 .btn {
     display: inline-block;
-    @include btn-on-dark;
+    
+    &--dark {
+        @include btn-on-dark;
+    }
+    
+    &--light {
+        @include btn-on-light;
+    }
 }
+

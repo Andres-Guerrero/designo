@@ -1,0 +1,121 @@
+.about__card {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background: $peach url('../images/about-us-circle-bg.svg');
+    background-repeat: no-repeat;
+    background-position: 100% 35%;
+    background-size: 70%;
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+        background-position: -170% 130%;
+        background-size: 90%;
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+        text-align: left;
+        background-position: 5% 100%;
+        background-size: 55%;
+    }
+
+    .about__info {
+        padding: 80px 24px;
+        
+        
+        @media screen and (min-width: $tablet) {
+            padding: 68px 58px;
+        }
+        
+        @media screen and (min-width: $desktop) {
+            width: 636px;
+            padding: 0 95px;
+        }
+
+        h1 {
+            margin-bottom: 24px;
+            font-size: 3em;
+            color: $white;
+        }
+        
+        h2 {
+            margin-bottom: 24px;
+            font-size: 2.5em;
+            color: $peach;
+        }
+
+        & h1 + p {
+            color: $white;
+        }
+
+        & h2 + p {
+            color: $dark-grey
+        }
+    }
+
+    &.sub__card {
+        background: #FDF3F0 url('../images/about-us_subcard-bg.svg');
+        background-repeat: no-repeat;
+
+        @media screen and (min-width: $tablet) {
+            background-position: 50% 80%;
+        }
+        
+        @media screen and (min-width: $desktop) {
+            background-position: 0% 100%;
+        }
+
+        &.reverse {
+            background-position: 60% 100%;
+        }
+    }
+}
+
+.reverse{
+    flex-direction: column;
+    flex-direction: column-reverse;
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: row-reverse;
+        text-align: left;
+        
+        .world__class__bg {
+            border-top-left-radius: $radius-container;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: $radius-container;
+        }
+    }
+}
+
+// BACKGROUNDS
+.about__us__bg,
+.world__class__bg,
+.real__deal__bg {
+    @include border-radius-tablet-desktop;
+}
+
+.about__us__bg {
+    background-image: url('../images/about-us-bg.jpg');
+    
+    @media screen and (min-width: $desktop) { 
+        height: 480px;
+    }
+}
+
+.world__class__bg,
+.real__deal__bg {
+    @media screen and (min-width: $desktop) { 
+        height: 640px;
+    }
+}
+
+.world__class__bg {
+    background-image: url('../images/world-class-bg.jpg');
+}
+
+.real__deal__bg {
+    background-image: url('../images/real-deal-bg.jpg');
+}

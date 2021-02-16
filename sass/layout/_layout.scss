@@ -1,0 +1,18 @@
+.content__wrap,
+.content__wrap--full {
+    margin-bottom: 96px;
+
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 120px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 160px;
+    }
+}
+
+.header,
+.footer,
+.cta__bottom {
+    margin-bottom: 0;
+}

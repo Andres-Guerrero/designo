@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="640px" height="640px" viewBox="0 0 640 640" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>about-us-circle-bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#5D0202" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#5D0202" stop-opacity="0.497568837" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.308942522">
+        <g id="bg" transform="translate(-1021.000000, -619.000000)" fill="url(#linearGradient-1)">
+            <circle id="Oval" transform="translate(1341.000000, 939.000000) scale(-1, 1) rotate(180.000000) translate(-1341.000000, -939.000000) " cx="1341" cy="939" r="320"></circle>
+        </g>
+    </g>
+</svg>

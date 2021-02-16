@@ -6,7 +6,10 @@
 @import "base/base";
 @import "base/typography";
 
-// 3 - COMPONENTS
+// 3 - LAYOUT
+@import "layout/layout";
+
+// 4 - COMPONENTS
 @import "components/header";
 @import "components/navigation";
 @import "components/content";
@@ -16,10 +19,8 @@
 @import "components/cover_page";
 @import "components/hero_banner";
 @import "components/service_banner";
-@import "components/values";
+@import "components/icons_grid";
 @import "components/grid_content";
-
-// 4 - LAYOUT
-
+@import "components/about_card";
 
 // 5 - PAGES
