@@ -1,0 +1,106 @@
+.location {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    
+    @media screen and (min-width: $tablet) {
+        text-align: left;
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+    }
+
+    &__info {
+
+        .info {
+            padding: 80px 0;
+            background: $extra-light-peach url(('../images/about-us_subcard-bg.svg'));
+            background-repeat: no-repeat;
+            background-position: 0% 0%;
+            
+            @media screen and (min-width: $tablet) {
+                padding: 88px 75px;
+                border-radius: $radius-container;
+                background-position: 0% 100%;
+            }
+        
+            @media screen and (min-width: $desktop) {
+                width: 730px;
+                margin-right: 30px;
+                padding: 88px 95px;
+            }
+        
+            h4 {
+                margin-bottom: 24px;
+                font-size: 2em;
+                font-weight: $medium;
+                color: $peach;
+            }
+            
+            .info__address__contact {
+                display: flex;
+                flex-direction: column;
+                
+                @media screen and (min-width: $tablet) {
+                    flex-direction: row;
+                }
+                
+                @media screen and (min-width: $desktop) {
+                    justify-content: space-between;
+                }
+                
+                .address,
+                .contact {
+                    @media screen and (min-width: $tablet) {
+                        width: 50%;
+                    }
+                }
+                
+                .address {
+                    margin-bottom: 24px;
+                    @media screen and (min-width: $tablet) {
+                        margin-bottom: 0;
+                        margin-right: 30px;
+                    }
+                }
+
+                .address h5,
+                .contact h5 {
+                    font-weight: bold;
+                    color: $dark-grey;
+                }
+            }
+        
+            p {
+                color: $dark-grey;
+            }
+        }
+    }
+
+    &__map {
+        background-color: sandybrown;
+        @media (min-width: $tablet) {
+            margin-bottom: 24px;
+            border-radius: $radius-container;
+        }
+        @media (min-width: $desktop) {
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+
+    &.reverse {
+        @media screen and (min-width: $desktop) {
+            flex-direction: row-reverse;
+        }
+
+        .info {
+            @media screen and (min-width: $desktop) {
+                margin-right: 0;
+                margin-left: 30px;
+            }
+        }
+    }
+}
+

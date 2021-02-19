@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>empty-field-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-10.000000, -182.000000)">
+            <g id="Group-8" transform="translate(10.000000, 182.000000)">
+                <circle id="Oval" fill="#FFFFFF" cx="10" cy="10" r="10"></circle>
+                <g id="Group-7" transform="translate(9.000000, 5.000000)" fill="#E7816B">
+                    <path d="M0,0 L2,0 L2,7 L0,7 L0,0 Z M0,9 L2,9 L2,11 L0,11 L0,9 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

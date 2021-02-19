@@ -9,8 +9,9 @@ $white: #FFFFFF;
 
 // Secondary Colors
 $light-peach: #FFAD9B;
+$extra-light-peach: #FDF3F0;
 $dark-grey: #333136;
-$light-grey: #DFDFDF;
+$light-grey: #F1F3F5;
 
 // Footer color font
 $footer-gray: #8D8D8E;
@@ -19,6 +20,7 @@ $footer-gray: #8D8D8E;
     FONT PROPERTIES
 ****************************/
 
+$font-family: "Jost", sans-serif;
 $font-base-size: 1em; // 16px
 $regular: 400;
 $medium: 500;
