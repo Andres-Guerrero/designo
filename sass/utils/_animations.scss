@@ -1,0 +1,79 @@
+// Menu Mobile In
+@-webkit-keyframes menu-mobile-in {
+    from {
+        top: 123px;
+        opacity: 0;
+    }
+    to {
+        top: 103px;
+        opacity: 1;
+    }
+}
+
+@keyframes menu-mobile-in {
+    from {
+        top: 123px;
+        opacity: 0;
+    }
+    to {
+        top: 103px;
+        opacity: 1;
+    }
+}
+
+// Overlay Opacity
+@-webkit-keyframes opacity-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .5;
+    }
+}
+
+@keyframes opacity-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .5;
+    }
+}
+
+// Open Menu Btn Animation
+@-webkit-keyframes mobile-btn-open {
+    from {
+        background-position-y: 20px;
+    }
+    to {
+        background-position-y: 0px;
+    }
+}
+
+@keyframes mobile-btn-open {
+    from {
+        background-position-y: 20px;
+    }
+    to {
+        background-position-y: 0px;
+    }
+}
+
+// Close Menu Btn Animation
+@-webkit-keyframes mobile-btn-close {
+    from {
+        background-position-y: 0px;
+    }
+    to {
+        background-position-y: 20px;
+    }
+}
+
+@keyframes mobile-btn-close {
+    from {
+        background-position-y: 0px;
+    }
+    to {
+        background-position-y: 20px;
+    }
+}

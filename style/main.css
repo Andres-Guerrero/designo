@@ -72,9 +72,14 @@ input {
   border-radius: 0;
 }
 
+body {
+  position: relative;
+}
+
 a {
   text-decoration: none;
   color: #FFFFFF;
+  -webkit-tap-highlight-color: transparent;
 }
 a:hover {
   text-decoration: underline;
@@ -92,6 +97,7 @@ textarea {
   border-left: 0;
   outline: none;
   background: transparent;
+  font-size: 0.9375em;
   font-family: "Jost", sans-serif;
   font-weight: 500;
   color: #FFFFFF;
@@ -193,9 +199,12 @@ h3 {
   margin-bottom: 0;
 }
 
+.header {
+  position: relative;
+  z-index: 10;
+}
 .header__content {
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding: 35px 24px;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -203,13 +212,12 @@ h3 {
 }
 @media only screen and (min-width: 768px) {
   .header__content {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding: 64px 0;
   }
 }
 @media only screen and (min-width: 1440px) {
   .header__content {
-    padding: 64px 2.5rem;
+    padding: 64px 0;
   }
 }
 .header__content__logo img {
@@ -218,6 +226,10 @@ h3 {
 
 #navigation__toggle {
   display: block;
+  width: 24px;
+  height: 20px;
+  align-self: flex-start;
+  background-image: url("../images/mobile/open-close-menu.svg");
 }
 
 .navigation {
@@ -257,6 +269,49 @@ h3 {
     display: none;
   }
 }
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #000;
+  opacity: 0.5;
+  z-index: 9;
+  display: none;
+}
+
+.visible {
+  display: flex;
+  -webkit-animation-name: opacity-in;
+  animation-name: opacity-in;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+}
+
+.mobile-in {
+  -webkit-animation-name: menu-mobile-in;
+  animation-name: menu-mobile-in;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.mobile-btn-open {
+  -webkit-animation-name: mobile-btn-open;
+  animation-name: mobile-btn-open;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.mobile-btn-close {
+  -webkit-animation-name: mobile-btn-close;
+  animation-name: mobile-btn-close;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
 .content__wrap {
   max-width: 100%;
   padding-right: 1.5em;
@@ -518,10 +573,11 @@ h3 {
 @media screen and (min-width: 1440px) {
   .hero__banner {
     padding-top: 140px;
-    padding-right: 95px;
+    padding-right: 476px;
     padding-left: 95px;
     flex-direction: row;
     background-position: top right;
+    position: relative;
   }
 }
 
@@ -568,16 +624,22 @@ h3 {
 
 .hero__image {
   height: 370px;
+  overflow: hidden;
+  -webkit-filter: drop-shadow(20px -40px 80px rgba(93, 2, 2, 0.5));
+  filter: drop-shadow(20px -40px 80px rgba(93, 2, 2, 0.5));
+}
+@media screen and (min-width: 768px) {
+  .hero__image {
+    height: 388px;
+  }
 }
 @media screen and (min-width: 1440px) {
   .hero__image {
-    flex-grow: 3;
+    height: 500px;
+    position: absolute;
+    bottom: 0px;
+    right: 95px;
   }
-}
-.hero__image img {
-  border-radius: 35px;
-  -webkit-filter: drop-shadow(20px -40px 80px rgba(93, 2, 2, 0.5));
-  filter: drop-shadow(20px -40px 80px rgba(93, 2, 2, 0.5));
 }
 
 .service__banners {
@@ -1495,6 +1557,16 @@ h3 {
   text-align: left;
 }
 
+label {
+  position: absolute;
+  top: 4px;
+  left: 12px;
+  font-family: "Jost", sans-serif;
+  font-size: 0.9375em;
+  font-weight: 500;
+  color: #F3C0B5;
+}
+
 .btn {
   display: inline-block;
 }
@@ -1525,6 +1597,75 @@ h3 {
   text-decoration: none;
   color: #FFF;
   background-color: #FFAD9B;
+}
+
+@-webkit-keyframes menu-mobile-in {
+  from {
+    top: 123px;
+    opacity: 0;
+  }
+  to {
+    top: 103px;
+    opacity: 1;
+  }
+}
+@keyframes menu-mobile-in {
+  from {
+    top: 123px;
+    opacity: 0;
+  }
+  to {
+    top: 103px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes opacity-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+@keyframes opacity-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+@-webkit-keyframes mobile-btn-open {
+  from {
+    background-position-y: 20px;
+  }
+  to {
+    background-position-y: 0px;
+  }
+}
+@keyframes mobile-btn-open {
+  from {
+    background-position-y: 20px;
+  }
+  to {
+    background-position-y: 0px;
+  }
+}
+@-webkit-keyframes mobile-btn-close {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: 20px;
+  }
+}
+@keyframes mobile-btn-close {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: 20px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

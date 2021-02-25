@@ -12,18 +12,12 @@
 <body>
 
     <!-- HEADER -->
-    <header class="content__wrap header">
+    <header class="content__wrap--full header">
         <div class="content header__content">
             <a href="#" class="header__content__logo">
                 <img src="images/logo-header.png" alt="DESIGNO">
             </a>
-            <a href="#" id="navigation__toggle">
-                <svg width="24" height="20" xmlns="http://www.w3.org/2000/svg">
-                    <g fill="#1D1C1E" fill-rule="evenodd">
-                      <path d="M0 0h24v4H0zM0 8h24v4H0zM0 16h24v4H0z"/>
-                    </g>
-                </svg>
-            </a>
+            <a href="#" id="navigation__toggle"></a>
             <nav class="navigation">
                 <a href="#">OUR COMPANY</a>
                 <a href="#">LOCATIONS</a>
@@ -31,6 +25,9 @@
             </nav>
         </div>
     </header>
+
+    <!-- OVERLAY MOBILE MENU -->
+    <div class="overlay"></div>
 
     <!-- ABOUT US -->
     <section class="content__wrap--full">
@@ -40,23 +37,30 @@
                 <p>Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop us a line.</p>
             </div>
             <div class="contact__card__form">
-                <form action="#">
+                <form action="#" id="contact_form">
                     <div class="form__field">
                         <!-- <div class="alert_empty">
                             Can't be empty
                         </div> -->
-                        <input type="text" name="name" id="name" placeholder="Name">
+                        <label for="name">Name</label>
+                        <!-- <input type="text" name="name" id="name" placeholder="Name"> -->
+                        <input type="text" name="name" id="name">
                     </div>
                     <div class="form__field">
-                        <input type="email" name="email" id="email" placeholder="Email Address">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" id="email">
+                        <!-- <input type="email" name="email" id="email" placeholder="Email Address"> -->
                     </div>
                     <div class="form__field">
-                        <input type="tel" name="tel" id="tel" placeholder="Phone">
+                        <label for="phone">Phone</label>
+                        <input type="tel" name="phone" id="phone">
+                        <!-- <input type="tel" name="phone" id="phone" placeholder="Phone"> -->
                     </div>
                     <div class="form__field">
-                        <textarea name="msg" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                        <label for="msg">You Message</label>
+                        <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Your Message"></textarea>
                     </div>
-                    <input type="button" value="Submit" class="btn btn--dark">
+                    <input type="submit" value="Submit" id="submit" class="btn btn--dark">
                 </form>
             </div>
         </div>
@@ -153,5 +157,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>

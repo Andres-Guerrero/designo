@@ -16,10 +16,12 @@
 
     @media screen and (min-width: $desktop) {
         padding-top: 140px;
-        padding-right: 95px;
+        // padding-right: 95px;
+        padding-right: 476px;
         padding-left: 95px;
         flex-direction: row;
         background-position: top right;
+        position: relative;
     }
 }
 
@@ -63,14 +65,20 @@
 
 .hero__image {
     height: 370px;
-
-    @media screen and (min-width: $desktop) {
-        flex-grow: 3;
+    overflow: hidden;
+    // border-radius: 35px;
+    -webkit-filter: drop-shadow(20px -40px 80px rgba(93,2,2,0.5));
+    filter: drop-shadow(20px -40px 80px rgba(93,2,2,0.5));
+    
+    @media screen and (min-width: $tablet) {
+        height: 388px;
     }
     
-    img {
-        border-radius: 35px;
-        -webkit-filter: drop-shadow(20px -40px 80px rgba(93,2,2,0.5));
-                filter: drop-shadow(20px -40px 80px rgba(93,2,2,0.5));
+    @media screen and (min-width: $desktop) {
+        height: 500px;
+        // flex-grow: 3;
+        position: absolute;
+        bottom: 0px;
+        right: 95px;
     }
 }
