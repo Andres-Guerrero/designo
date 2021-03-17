@@ -695,7 +695,7 @@ h3 {
   font-size: 0.9375em;
   letter-spacing: 5px;
 }
-.service__banner .overlay {
+.service__banner .service__overlay {
   width: 100%;
   height: 100%;
   border-radius: 15px;
@@ -706,7 +706,7 @@ h3 {
   left: 0;
   z-index: 1;
 }
-.service__banner:hover > div.overlay {
+.service__banner:hover > div.service__overlay {
   background-color: #FFAD9B;
   opacity: 0.8;
 }
