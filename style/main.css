@@ -1452,7 +1452,13 @@ h3 {
   color: #333136;
 }
 .location__map {
+  height: 320px;
   background-color: sandybrown;
+}
+@media (min-width: 768px) {
+  .location__map {
+    height: 326px;
+  }
 }
 @media (min-width: 768px) {
   .location__map {
