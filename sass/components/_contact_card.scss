@@ -16,6 +16,8 @@
     }
 
     @media screen and (min-width: $desktop) {
+        padding-right: 95px;
+        padding-left: 95px;
         flex-direction: row;
         justify-content: stretch;
         background-position: 5% 100%;
@@ -34,7 +36,7 @@
         
         @media screen and (min-width: $desktop) {
             width: 636px;
-            // padding: 0 95px;
+            padding-right: 95px;
         }
 
         h1 {

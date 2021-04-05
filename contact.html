@@ -37,7 +37,7 @@
                 <p>Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop us a line.</p>
             </div>
             <div class="contact__card__form">
-                <form action="#" id="contact_form">
+                <form action="#" id="contact_form" novalidate>
                     <div class="form__field">
                         <!-- <div class="alert_empty">
                             Can't be empty
@@ -53,12 +53,13 @@
                     </div>
                     <div class="form__field">
                         <label for="phone">Phone</label>
-                        <input type="tel" name="phone" id="phone">
+                        <input type="tel" name="tel" id="tel">
                         <!-- <input type="tel" name="phone" id="phone" placeholder="Phone"> -->
                     </div>
                     <div class="form__field">
                         <label for="msg">You Message</label>
-                        <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Your Message"></textarea>
+                        <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+                        <!-- <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Your Message"></textarea> -->
                     </div>
                     <input type="submit" value="Submit" id="submit" class="btn btn--dark">
                 </form>
@@ -157,7 +158,6 @@
             </div>
         </div>
     </footer>
-
     <script src="js/script.js"></script>
 
 </body>

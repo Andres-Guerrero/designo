@@ -6,4 +6,11 @@ label {
     font-size: 0.9375em;
     font-weight: $medium;
     color: #F3C0B5;
+    z-index: 50;
+}
+input#name,
+input#email,
+input#tel {
+    position: relative;
+    z-index: 51;
 }

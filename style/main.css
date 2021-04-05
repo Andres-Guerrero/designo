@@ -1498,6 +1498,8 @@ h3 {
 }
 @media screen and (min-width: 1440px) {
   .contact__card {
+    padding-right: 95px;
+    padding-left: 95px;
     flex-direction: row;
     justify-content: stretch;
     background-position: 5% 100%;
@@ -1516,6 +1518,7 @@ h3 {
 @media screen and (min-width: 1440px) {
   .contact__card__info {
     width: 636px;
+    padding-right: 95px;
   }
 }
 .contact__card__info h1 {
@@ -1565,6 +1568,14 @@ label {
   font-size: 0.9375em;
   font-weight: 500;
   color: #F3C0B5;
+  z-index: 50;
+}
+
+input#name,
+input#email,
+input#tel {
+  position: relative;
+  z-index: 51;
 }
 
 .btn {

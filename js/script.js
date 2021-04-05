@@ -7,13 +7,17 @@ const overlay = document.querySelector('.overlay');
 
 // Contact form
 const contact_form = document.querySelector('#contact_form');
+const inputFields = document.querySelectorAll('#contact_form input[type="text"]');
 const name = document.querySelector('#name');
 const email = document.querySelector('#email');
 const tel = document.querySelector('#tel');
 const message = document.querySelector('#msg');
 const submit = document.querySelector('#submit');
+const fieldsToValidate = document.querySelectorAll('#name, #email, #tel, #msg');
 
-// Mobile Menu Behavior
+/************
+ Mobile Menu Behavior
+ ************/
 menu_btn.addEventListener('click', function() {
 	displayMenu();
 	bgMobileMenuBtn();
@@ -46,13 +50,75 @@ function bgMobileMenuBtn() {
 	}
 }
 
-// Contact Form Validation
+/************
+Contact Form Validation
+************/
+fieldsToValidate.forEach((input) => {
+	input.addEventListener('keyup', function(e) {
+		if (input.value.trim() === '' && !this.nextElementSibling) {
+			this.parentElement.appendChild(errorMessage("Can't be empty"));
+		}
+		if (input.value.trim() !== '' && this.nextElementSibling) {
+			this.nextElementSibling.remove();
+		}
+	});
+
+	input.addEventListener('focus', function() {
+		this.previousElementSibling.style.display = 'none';
+	});
+
+	input.addEventListener('blur', function() {
+		if (input.value === '') {
+			this.previousElementSibling.style.display = 'block';
+		}
+	});
+
+	// input.addEventListener('keypress', function(e) {
+	// 	if (input.name === 'tel') {
+	// 		if (e.charCode < 48 || e.charCode > 57) {
+	// 			// disabling the default behavior if NOT numbers are typed
+	// 			e.preventDefault();
+	// 		}
+	// 	}
+	// });
+});
+
+function validatePhone(el) {
+	// const regex = /[0-9]|\./;
+	// if (!regex.test(el)) {
+	// 	console.log('is not a number');
+	// }
+}
+
+// Submit Contact Form
 contact_form.addEventListener('submit', function(e) {
-	if (name.value === '' || email.value === '' || tel.value === '' || message.value === '') {
-		console.log('Not');
-	}
+	fieldsToValidate.forEach((input) => {
+		if (input.value.trim() === '' && !input.nextElementSibling) {
+			input.parentElement.appendChild(errorMessage("Can't be empty"));
+		}
+		if (input.name === 'tel' && isNaN(input.value)) {
+			tel.parentElement.appendChild(errorMessage('Ivalid number'));
+		}
+		if (input.name === 'email') {
+			let validEmail = validateEmail(input.value);
+			if (!validEmail && !input.nextElementSibling) {
+				email.parentElement.appendChild(errorMessage('Ivalid email'));
+			}
+		}
+	});
 
 	e.preventDefault();
 });
 
-function focusField() {}
+function validateEmail(email) {
+	const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return reg.test(email);
+}
+
+// Create error messages
+function errorMessage(message) {
+	const errorContainer = document.createElement('div');
+	errorContainer.innerHTML = message;
+	errorContainer.classList = 'alert_empty';
+	return errorContainer;
+}
