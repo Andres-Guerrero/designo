@@ -103,11 +103,11 @@ textarea {
   color: #FFFFFF;
 }
 
-input[type=button] {
-  border: 0;
+input[type=submit] {
+  border: none;
 }
 
-input[type=button]:hover {
+input[type=submit]:hover {
   cursor: pointer;
 }
 
@@ -1457,7 +1457,7 @@ h3 {
 }
 @media (min-width: 768px) {
   .location__map {
-    height: 326px;
+    height: 304px;
   }
 }
 @media (min-width: 768px) {

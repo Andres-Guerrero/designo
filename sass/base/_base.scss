@@ -29,11 +29,11 @@ textarea {
     color: $white;
 }
 
-input[type="button"] {
-    border: 0;
+input[type="submit"] {
+    border: none;
 }
 
-input[type="button"]:hover {
+input[type="submit"]:hover {
     cursor: pointer;
 }
 
