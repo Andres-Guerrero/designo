@@ -171,14 +171,14 @@ const locations = [
 ];
 ```
 
-A function called drawMaps get as parameters the data from the locations object and internally it draws a map based on the longitude and latitude coordinates. It also makes use of the icon object from the library to customize the icon that indicates the exact location.
+A function called `drawMaps` get as parameters the data from the `locations` object and internally it draws a map based on the longitude and latitude coordinates. It also makes use of the icon object from the library to customize the icon that indicates the exact location.
 ```javascript
 function drawMaps(country, long, lat) {
 	...
 }
 ```
 
-Finally, I used a forEach loop to iterate over locations object and on each iteration I draw a map on the specific HTML element. 
+Finally, I used a `forEach` loop to iterate over `locations` object and on each iteration I draw a map on the specific HTML element. 
 ```javascript
 locations.forEach((location) => {
 	drawMaps(location.country.toLowerCase(), location.long, location.lat);
